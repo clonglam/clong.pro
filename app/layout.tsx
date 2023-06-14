@@ -1,9 +1,11 @@
-import "@/styles/globals.css"
+import "@/styles/globals.scss"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import CustomProvider from "@/components/CustomProvider"
+import SiteFooter from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -40,13 +42,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
+          <CustomProvider>
+            <div className="paper-texture relative flex min-h-screen flex-col bg-black">
               <SiteHeader />
               <div className="flex-1">{children}</div>
+              <SiteFooter />
             </div>
             <TailwindIndicator />
-          </ThemeProvider>
+          </CustomProvider>
         </body>
       </html>
     </>

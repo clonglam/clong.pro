@@ -9,10 +9,23 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
+    {
+      title: "About",
+      href: "/about",
+    },
+    {
+      title: "Projects",
+      href: "/projects",
+    },
+    {
+      title: "Blog",
+      href: "https://blog.clong.pro",
+    },
   ],
-  links: {
+  socialMedia: {
     twitter: "https://twitter.com/shadcn",
     github: "https://github.com/shadcn/ui",
     docs: "https://ui.shadcn.com",
   },
+  marqueeText: ["Projects", "Works", "Designs"],
 }

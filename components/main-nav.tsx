@@ -17,6 +17,7 @@ export function MainNav({ items }: MainNavProps) {
         <Icons.logo className="h-6 w-6" />
         <span className="inline-block font-bold">{siteConfig.name}</span>
       </Link>
+
       {items?.length ? (
         <nav className="flex gap-6">
           {items?.map(
@@ -26,7 +27,7 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
+                    "flex items-center text-sm font-medium text-black after:text-white after:mix-blend-difference",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >
