@@ -1,16 +1,95 @@
 import React from "react"
+import { Metadata } from "next"
 import Image from "next/image"
-import Link from "next/link"
-import { ProjectTag, projects } from "@/data"
+import { notFound } from "next/navigation"
+import { allPosts } from "@/.contentlayer/generated"
+// import { ProjectTag, projects } from "@/data"
+import { env } from "@/env.mjs"
 
-import { Badge } from "@/components/ui/badge"
+// import { allAuthors, allPosts } from "contentlayer/generated"
+
+import { absoluteUrl } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-type Props = {}
+interface ProjectPageProps {
+  params: {
+    slug: string[]
+  }
+}
 
-function ProjectPage({}: Props) {
-  const project = projects[0]
+async function getPostFromParams(params: { slug: string[] }) {
+  const slug = params?.slug?.join("/")
+  const post = allPosts.find((post) => post.slugAsParams === slug)
+
+  if (!post) {
+    null
+  }
+
+  return post
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const post = await getPostFromParams(params)
+
+  if (!post) {
+    return {}
+  }
+
+  const url = env.NEXT_PUBLIC_APP_URL
+
+  const ogUrl = new URL(`${url}/api/og`)
+  ogUrl.searchParams.set("heading", post.title)
+  ogUrl.searchParams.set("type", "Blog Post")
+  ogUrl.searchParams.set("mode", "dark")
+
+  return {
+    title: post.title,
+    description: post.description,
+    // authors: post.authors.map((author) => ({
+    //   name: author,
+    // })),
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      url: absoluteUrl(post.slug),
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [ogUrl.toString()],
+    },
+  }
+}
+
+export async function generateStaticParams(): Promise<
+  ProjectPageProps["params"][]
+> {
+  return allPosts.map((post) => ({
+    slug: post.slugAsParams.split("/"),
+  }))
+}
+
+async function ProjectPage({ params }: ProjectPageProps) {
+  const project = await getPostFromParams(params)
+
+  if (!project) {
+    notFound()
+    console.log("project Not Found")
+    return <div>Project Not Found.</div>
+  }
 
   return (
     <div className="mx-auto min-h-[100vh] w-full bg-white px-8 py-5">
@@ -18,7 +97,7 @@ function ProjectPage({}: Props) {
         title={project.title}
         tags={project.tags}
         year={project.year}
-        coverImage={project.coverImage}
+        coverImage={project.image}
         githubLink={project.githubLink}
         webDemoLink={project.webDemoLink}
       />
@@ -31,14 +110,14 @@ function ProjectPage({}: Props) {
         />
       </div>
 
-      <ImageGallery gallery={project.imageGallery} />
+      {/* <ImageGallery gallery={project.imageGallery} /> */}
     </div>
   )
 }
 
 interface ProjectIntroType {
   title: string
-  tags: ProjectTag[]
+  tags: string[]
   coverImage: string
   githubLink?: string
   webDemoLink?: string
@@ -63,7 +142,7 @@ function ProjectIntro({
 
         {tags.map((tag, index) => (
           <>
-            <span>{tag.label}</span>
+            <span>{tag}</span>
             {index !== tags.length - 1 && <span>|</span>}
           </>
         ))}
@@ -123,22 +202,22 @@ function ProjectDescription({
   )
 }
 
-function ImageGallery({ gallery }: { gallery: string[] }) {
-  return (
-    <div className="flex flex-col gap-y-5">
-      {gallery.map((image, index) => (
-        <div className="relative aspect-video h-full w-full " key={index}>
-          <Image
-            src={image}
-            alt={`projectImage_${index}`}
-            fill={true}
-            style={{ objectFit: "contain", objectPosition: "left" }}
-          />
-        </div>
-      ))}
-    </div>
-  )
-}
+// function ImageGallery({ gallery }: { gallery: string[] }) {
+//   return (
+//     <div className="flex flex-col gap-y-5">
+//       {gallery.map((image, index) => (
+//         <div className="relative aspect-video h-full w-full " key={index}>
+//           <Image
+//             src={image}
+//             alt={`projectImage_${index}`}
+//             fill={true}
+//             style={{ objectFit: "contain", objectPosition: "left" }}
+//           />
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }
 
 function ProjectTechUsed({ technology }: { technology: string[] }) {
   return (

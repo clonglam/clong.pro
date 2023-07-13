@@ -1,6 +1,5 @@
 import React from "react"
 import Link from "next/link"
-import { Divide } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"

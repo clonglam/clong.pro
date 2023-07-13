@@ -9,7 +9,7 @@ type Props = {}
 
 function ProjectSection({}: Props) {
   return (
-    <section className="container mt-3 max-w-5xl px-8 py-5">
+    <section className="container mb-10 mt-3 max-w-5xl px-8 py-5">
       <h3 className="mb-2 text-5xl font-bold md:mb-4">Selected Project</h3>
       <p
         className="md:text-md mb-5 text-justify text-sm leading-normal lg:text-lg "
@@ -41,7 +41,7 @@ function ProjectCard({ project }: ProjectCardType) {
       <div className="relative aspect-video h-full w-full rounded-lg">
         <Image
           className="rounded-lg"
-          src="/shopit-cover.png"
+          src="/assets/blog/shopit-cover.png"
           fill
           alt="shopit-cover"
         />

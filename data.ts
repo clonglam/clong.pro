@@ -1,5 +1,6 @@
 export const projects: ProjectType[] = [
   {
+    slugAsParams: "shop-it",
     title: "Shop-it",
     slug: "shop-it",
     category: "Ecomerce",
@@ -36,6 +37,7 @@ export const projects: ProjectType[] = [
 export type ProjectType = {
   title: string
   slug: string
+  slugAsParams: string
   year: number
   category: string
   subHeading: string
