@@ -12,13 +12,13 @@ header {
   box-shadow: $base-box-shadow;
   z-index: 5;
 
-  @include themify {
-    color: themed("textColor");
-    background-color: themed("vp-c-bg-elv");
-  }
+  // @include themify {
+  //   color: themed("textColor");
+  //   background-color: themed("vp-c-bg-elv");
+  // }
 
   .container {
-    @extend %flex-layout;
+    // @extend %flex-layout;
     padding-bottom: 1rem;
     padding-top: 1rem;
     height: auto;

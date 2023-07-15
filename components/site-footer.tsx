@@ -12,7 +12,7 @@ type Props = {}
 
 function SiteFooter({}: Props) {
   return (
-    <div className="container h-[400px] bg-slate-950 px-8 py-12 text-white">
+    <div className="container h-[400px] bg-[#1f1f1f] px-8 py-12 text-white">
       <div className="mb-2 w-full text-white">
         <p className="mb-[5px] text-xs font-semibold">CLong</p>
         <p className="text-xs font-light">©2022 - CLong.pro </p>

@@ -6,14 +6,14 @@ import Navigation_mobile from "./navigation-mobile"
 export function SiteHeader() {
   return (
     <header
-      className={`header-container sticky top-0 z-40 w-full border-b
-      bg-background`}
+      className={`header-container sticky top-0 z-40 mt-[-68px] w-full bg-transparent text-white`}
     >
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+      <div className="container flex items-center justify-between space-x-4 sm:space-x-0">
+        {/* <div className="container flex h-16 items-center justify-between space-x-4 sm:space-x-0"> */}
         <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <Navigation_mobile navigation={siteConfig.mainNav} />
-        </div>
+        {/* <div className="flex flex-1 items-center justify-end space-x-4 md:hidden"> */}
+        <Navigation_mobile navigation={siteConfig.mainNav} />
+        {/* </div> */}
       </div>
     </header>
   )

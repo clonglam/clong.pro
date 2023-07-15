@@ -36,16 +36,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
-        >
+        <body className={cn("font-sans antialiased", fontSans.variable)}>
           <CustomProvider>
-            <div className="paper-texture relative flex min-h-screen flex-col bg-black">
+            <div className="relative min-h-screen bg-[#1f1f1f]">
               <SiteHeader />
-              <div className="flex-1">{children}</div>
+              <div className="flex-1 pt-[-68px]">{children}</div>
               <SiteFooter />
             </div>
             <TailwindIndicator />

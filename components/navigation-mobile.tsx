@@ -22,7 +22,7 @@ const Navigation_mobile = ({ navigation }: Props) => {
   }
 
   return (
-    <div className="navigation-mobile">
+    <div className="navigation-mobile items-center">
       <MenuToggle toggle={() => toggleOpen()} isOpen={isOpen} />
 
       <motion.div
