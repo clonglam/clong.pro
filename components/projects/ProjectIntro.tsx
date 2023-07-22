@@ -38,7 +38,7 @@ export function ProjectIntro({
       <div className="mb-1 overflow-hidden">
         <motion.h1
           className={cn(
-            "text-4xl font-bold duration-500 delay-150 ease-ease-smooth",
+            "ease-ease-smooth text-4xl font-bold duration-500 delay-150",
             isInView ? "none" : "translate-y-[200px]"
           )}
         >
@@ -49,7 +49,7 @@ export function ProjectIntro({
       <div className="mb-1 overflow-hidden">
         <div
           className={cn(
-            "mb-1 flex items-center space-x-1 font-semibold duration-500 delay-500 ease-ease-smooth",
+            "ease-ease-smooth mb-1 flex items-center space-x-1 font-semibold duration-500 delay-500",
             isInView ? "none" : "translate-y-[200px]"
           )}
         >
@@ -67,7 +67,7 @@ export function ProjectIntro({
 
       <div
         className={cn(
-          "mb-2 flex gap-x-2  duration-500 delay-1000 ease-ease-smooth",
+          "ease-ease-smooth mb-2 flex  gap-x-2 duration-500 delay-1000",
           isInView ? "opacity-100" : "opacity-0"
         )}
       >
@@ -100,7 +100,7 @@ export function ProjectIntro({
         <div className="mb-3 pl-1 md:mb-0">
           <h3
             className={cn(
-              "font-bold  duration-500 delay-200 ease-ease-smooth",
+              "ease-ease-smooth font-bold duration-500 delay-200",
               isInView ? "opacity-100" : "opacity-0"
             )}
           >
@@ -110,7 +110,7 @@ export function ProjectIntro({
           <div className="overflow-hidden">
             <ul
               className={cn(
-                "duration-500 delay-300 ease-ease-smooth",
+                "ease-ease-smooth duration-500 delay-300",
                 isInView ? "none" : "translate-x-[-200px]"
               )}
             >
@@ -124,7 +124,7 @@ export function ProjectIntro({
         <div className="w-96">
           <h3
             className={cn(
-              "delay-1200 mb-2 text-5xl font-bold duration-500 ease-ease-smooth",
+              "delay-1200 ease-ease-smooth mb-2 text-5xl font-bold duration-500",
               isInView ? "none" : "translate-y-[200px]"
             )}
           >
@@ -132,7 +132,7 @@ export function ProjectIntro({
           </h3>
           <p
             className={cn(
-              " delay-[1500ms] text-sm font-medium duration-500 ease-ease-smooth",
+              "delay-[1600ms] ease-ease-smooth text-sm font-medium duration-500",
               isInView ? "none" : "translate-y-[200px]"
             )}
           >

@@ -16,9 +16,10 @@ function Projects({}: ProjectsProps) {
     .sort((a, b) => {
       return compareDesc(new Date(a.date), new Date(b.date))
     })
-  // <div className="bg-[#1f1f1f] text-[#F3F3F3]">
+  const newLocal =
+    "pt-[68px] container mx-auto min-h-[80vh] bg-[#1f1f1f] px-5 text-[#F3F3F3]"
   return (
-    <div className="container mx-auto min-h-[80vh]  bg-[#1f1f1f] px-5 py-8 text-[#F3F3F3]">
+    <div className={newLocal}>
       <h1 className="text-sl font-semibold">Projects</h1>
 
       <div className="grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-2 lg:grid-cols-3 ">

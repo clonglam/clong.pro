@@ -24,7 +24,7 @@ export const siteConfig = {
     },
   ],
   socialMedia: {
-    twitter: "https://twitter.com/shadcn",
+    twitter: "https://twitter.com/clonglam",
     github: "https://github.com/clonglam",
     // docs: "https://ui.shadcn.com",
   },

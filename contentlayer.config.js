@@ -64,9 +64,13 @@ export const Project = defineDocumentType(() => ({
       type: "boolean",
       default: true,
     },
-    image: {
+    ogImage: {
       type: "string",
       required: true,
+    },
+    images: {
+      type: "list",
+      of: { type: "string" },
     },
     authors: {
       // Reference types are not embedded.

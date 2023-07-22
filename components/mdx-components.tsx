@@ -5,6 +5,7 @@ import { useMDXComponent } from "next-contentlayer/hooks"
 import { cn } from "@/lib/utils"
 import { MdxCard } from "@/components/mdx-card"
 
+import { Dns } from "./Dns"
 import { Callout } from "./callout"
 
 const components: MDXComponents = {
@@ -149,10 +150,12 @@ const components: MDXComponents = {
     />
   ),
   Image: ({ className, ...props }) => (
+    // eslint-disable-next-line jsx-a11y/alt-text
     <Image className={cn(className)} {...props} />
   ),
   Callout,
   Card: MdxCard,
+  Dns: Dns,
 }
 
 interface MdxProps {

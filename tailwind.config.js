@@ -1,9 +1,12 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   theme: {
     container: {
       center: true,
@@ -48,24 +51,10 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      transitionTimingFunction: {
-        "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
-        "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
-        "ease-smooth": "cubic-bezier(0.17, 0.55, 0.55, 1)",
-      },
-      // transitionProperty: {
-      //   "ease-smooth": `
-      //     transitionProperty: "all";
-      //     transitionDuration: "0.5s";
-      //     transitionTimingFunction:"cubic-bezier(0.17, 0.55, 0.55, 1)";`}
-      // },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans-serif)", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
@@ -76,13 +65,8 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
-        slidein: {
-          "0%": { transform: "translateX(-30%)" },
-          "100%": { transform: "translateX(30)" },
-        },
       },
       animation: {
-        slidein: "slidein 0.5s forwards",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

@@ -1,14 +1,20 @@
 ---
 title: Astral Rewards
-subHeading: A Linkedin specially for actors students
-description: A Linkedin specially for actors students A Linkedin specially for actors students A Linkedin specially for actors students
+subHeading: Loyalty program with Presale information
+description: Astral Rewards is a specialized member program operating on an invitation-only basis, providing exclusive rewards for members purchasing presale property. The program serves a niche market, maintaining an intimate user base of around 1000 monthly active users.
 year: 2023
 technology:
   - ReactJs
+  - ExpressJs
+  - AWS cognito
+  - AWS Rds
 tags:
   - Web Application
-webDemoLink: https://ags-hkbuaf.com/
-image: /assets/projects/actors-gallery/actors-gallery-cover.png
+ogImage: https://clong-profile.s3.us-west-2.amazonaws.com/astralRewards/AstralRewardsOGImage.png
+images:
+  - https://clong-profile.s3.us-west-2.amazonaws.com/astralRewards/responsive_layout.png
+  - https://clong-profile.s3.us-west-2.amazonaws.com/astralRewards/Account.png
+  - https://clong-profile.s3.us-west-2.amazonaws.com/astralRewards/Member+Activity.png
 date: "2023-01-02"
 published: true
 video: "https://clong-profile.s3.us-west-2.amazonaws.com/astralRewardsDemo.mp4"
@@ -16,26 +22,51 @@ authors:
   - hugo
 ---
 
-## What is this?
+## What is Astral Rewards?
 
-The AGS Actor Gallery is an innovative platform designed specifically for actors to showcase their talents and professional profiles.
-
-Serving as an actor-centric version of **LinkedIn**, this gallery acts as a comprehensive repository for actors' details,
-With the ability to edit profiles and keep information up to date, actors can leverage this platform as a powerful tool for visibility
-and career growth in the entertainment industry.
+Astral Rewards is a specialized member program operating on an invitation-only basis, providing exclusive rewards for members purchasing presale property. The program serves a niche market, maintaining an intimate user base of around 1000 monthly active users.
 
 ## Difficulty & Solution
 
-1.  Designing a user-friendly interface to handle multiple data inputs and form display
+### Calculating referral rewards
 
-    - Implementing a parallel routes modal, allowing users to modify their profiles on a single page and navigate back easily using a close button or route back feature.
+<Dns>
+  To address the varying reward amounts for each referral, we implemented a
+  sophisticated system to calculate and allocate rewards accordingly, ensuring
+  fairness and accuracy in rewarding different users.
+</Dns>
 
-2.  Designing a user-friendly interface to handle multiple data inputs and form display
+    <Image
+      src="https://clong-profile.s3.us-west-2.amazonaws.com/astralRewards/Member_Referrals_cropped.png"
+      width="718"
+      height="404"
+      alt=" Calculating referral rewards"
+    />
 
-    Implementing a parallel routes modal, allowing users to modify their profiles on a single page and navigate back easily using a close button or route back feature.
+### Presale information updates
 
-3.  Designing a user-friendly interface to handle multiple data inputs and form display
+<Dns>
+  Managing diverse media links and types within the presale information required
+  a user-friendly admin page. We successfully designed and implemented a
+  CRUD-enabled admin interface for seamless handling of presale updates.
+</Dns>
+<Image
+  src="https://clong-profile.s3.us-west-2.amazonaws.com/astralRewards/projectDetails.png"
+  width="718"
+  height="404"
+  alt="Project Details"
+/>
 
-    Implementing a parallel routes modal, allowing users to modify their profiles on a single page and navigate back easily using a close button or route back feature.
+### Admin dashboard creation
 
-Hopefully that looks good enough to you.
+<Dns>
+  Our team crafted a comprehensive admin dashboard, empowering administrators to
+  efficiently monitor users, handle events, and manage updates. This dashboard
+  served as a central hub for streamlining administrative tasks effectively.
+</Dns>
+<Image
+  src="https://clong-profile.s3.us-west-2.amazonaws.com/astralRewards/Admin+Dashboard.png"
+  width="718"
+  height="404"
+  alt="Admin Dashboard"
+/>

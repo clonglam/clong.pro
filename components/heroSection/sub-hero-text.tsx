@@ -29,7 +29,7 @@ function SubHeroText({}: Props) {
       <div className="overflow-hidden">
         <h2
           className={cn(
-            "mb-6 w-[320px] text-5xl font-bold duration-500 delay-150 ease-ease-smooth md:mb-7 md:text-5xl lg:mb-8 lg:w-[680px] lg:text-6xl",
+            "ease-ease-smooth mb-6 w-[320px] text-5xl font-bold duration-500 delay-150 md:mb-7 md:text-5xl lg:mb-8 lg:w-[680px] lg:text-6xl",
             isInView ? "none" : "translate-y-[200px]"
           )}
         >
@@ -40,7 +40,7 @@ function SubHeroText({}: Props) {
       <div className="overflow-hidden">
         <p
           className={cn(
-            "md:text-md mb-2 w-[480px] max-w-[80vw] text-justify text-sm font-bold tracking-tight duration-500 delay-500 ease-ease-smooth md:w-[640px] lg:mb-5 lg:w-[840px]  lg:text-lg",
+            "md:text-md ease-ease-smooth mb-2 w-[480px] max-w-[80vw] text-justify text-sm font-bold tracking-tight duration-500 delay-500 md:w-[640px] lg:mb-5 lg:w-[840px]  lg:text-lg",
             isInView ? "none" : "translate-y-[200px]"
           )}
         >

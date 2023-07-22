@@ -2,11 +2,13 @@ import { Metadata } from "next"
 import Image from "next/image"
 import { allProjects } from "@/.contentlayer/generated"
 import { env } from "@/env.mjs"
+import ReactPlayer from "react-player/youtube"
 
 import { absoluteUrl } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
 import ProjectHero from "@/components/projects/ProjectHero"
 import { ProjectIntro } from "@/components/projects/ProjectIntro"
+import ProjectVideo from "@/components/projects/ProjectVideo"
 
 interface ProjectPageProps {
   params: {
@@ -79,7 +81,7 @@ async function ProjectPage({ params }: ProjectPageProps) {
   if (!project) return <div>There is no project name</div>
 
   return (
-    <div className="mx-auto min-h-[100vh] w-full bg-[#171717] text-[#DFD3C3]">
+    <div className="mx-auto mb-10 min-h-[100vh] w-full bg-[#171717] text-[#DFD3C3]">
       <ProjectHero
         title={project.title}
         description={project.description}
@@ -87,24 +89,13 @@ async function ProjectPage({ params }: ProjectPageProps) {
         year={project.year}
         webDemoLink={project.webDemoLink}
       />
-      {project.video ? (
-        <video src={project.video}></video>
-      ) : (
-        <div className="relative mx-auto mb-8 aspect-video h-full w-[80%]">
-          <Image
-            src={project.image}
-            alt={`${project.title} cover`}
-            fill={true}
-            style={{ objectFit: "contain", objectPosition: "center" }}
-          />
-        </div>
-      )}
+      <ProjectVideo videohref={project.video} placeholder={project.ogImage} />
 
       <ProjectIntro
         title={project.title}
         tags={project.tags}
         year={project.year}
-        coverImage={project.image}
+        coverImage={project.ogImage}
         githubLink={project.githubLink}
         webDemoLink={project.webDemoLink}
         description={project.description}
@@ -112,10 +103,25 @@ async function ProjectPage({ params }: ProjectPageProps) {
         technology={project.technology}
       />
 
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-5 md:px-10">
         <Mdx code={project.body.code} />
       </div>
-      {/* <ImageGallery gallery={project.imageGallery} /> */}
+
+      {project.images && (
+        <div className="container mx-auto flex w-full flex-col gap-y-5 space-y-3 px-5 py-3 md:px-10">
+          <h4 className="mt-5 text-3xl font-bold">Images</h4>
+          {project.images.map((image, index) => (
+            <div className="relative aspect-video w-full">
+              <Image
+                src={image}
+                alt={project.title + index}
+                fill
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

@@ -9,12 +9,14 @@ interface ProjectCardType {
 }
 
 function ScrollingProjectCard({ project }: ProjectCardType) {
-  const { title, image, slug } = project
+  const { title, ogImage, slug } = project
   return (
     <div className="group h-full w-full">
-      <div className="relative aspect-video h-full w-[55vw] rounded-lg md:w-[40vw]">
-        <Image className="rounded-lg" src={image} fill alt="shopit-cover" />
-      </div>
+      <Link href={slug}>
+        <div className="relative aspect-video h-full w-[55vw] rounded-lg md:w-[40vw]">
+          <Image className="rounded-lg" src={ogImage} fill alt="shopit-cover" />
+        </div>
+      </Link>
 
       <Link
         href={slug}
