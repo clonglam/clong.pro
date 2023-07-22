@@ -8,7 +8,6 @@ import CustomProvider from "@/components/CustomProvider"
 import SiteFooter from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: {
@@ -40,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <CustomProvider>
             <div className="relative min-h-screen bg-[#1f1f1f]">
               <SiteHeader />
-              <div className="flex-1 pt-[-68px]">{children}</div>
+              <div className="flex-1 ">{children}</div>
               <SiteFooter />
             </div>
             <TailwindIndicator />

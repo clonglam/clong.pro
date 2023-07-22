@@ -124,7 +124,7 @@ export function ProjectIntro({
         <div className="w-96">
           <h3
             className={cn(
-              "delay-[1200ms] mb-2 text-5xl font-bold duration-500 ease-ease-smooth",
+              "delay-1200 mb-2 text-5xl font-bold duration-500 ease-ease-smooth",
               isInView ? "none" : "translate-y-[200px]"
             )}
           >

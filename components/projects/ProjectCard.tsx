@@ -32,6 +32,7 @@ function ProjectCard({ project, index }: Props) {
 
       <Link href={project.slug}>
         <h3 className="flex gap-x-3 underline-offset-4 group-hover:underline">
+          {/* {project.slug} */}
           {project.title}
           <Icons.externalLink className="h-5 w-5" />
         </h3>

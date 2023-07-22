@@ -87,15 +87,18 @@ async function ProjectPage({ params }: ProjectPageProps) {
         year={project.year}
         webDemoLink={project.webDemoLink}
       />
-
-      <div className="relative mx-auto mb-8 aspect-video h-full w-[80%]">
-        <Image
-          src={project.image}
-          alt={`${project.title} cover`}
-          fill={true}
-          style={{ objectFit: "contain", objectPosition: "center" }}
-        />
-      </div>
+      {project.video ? (
+        <video src={project.video}></video>
+      ) : (
+        <div className="relative mx-auto mb-8 aspect-video h-full w-[80%]">
+          <Image
+            src={project.image}
+            alt={`${project.title} cover`}
+            fill={true}
+            style={{ objectFit: "contain", objectPosition: "center" }}
+          />
+        </div>
+      )}
 
       <ProjectIntro
         title={project.title}

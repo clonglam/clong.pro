@@ -11,7 +11,7 @@ export const siteConfig = {
     },
     {
       title: "About",
-      href: "/about",
+      href: "/#about",
     },
     {
       title: "Projects",
@@ -19,13 +19,14 @@ export const siteConfig = {
     },
     {
       title: "Blog",
-      href: "https://blog.clong.pro",
+      href: "/",
+      disabled: true,
     },
   ],
   socialMedia: {
     twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    github: "https://github.com/clonglam",
+    // docs: "https://ui.shadcn.com",
   },
   marqueeText: ["Projects", "Works", "Designs"],
 }

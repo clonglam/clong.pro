@@ -7,9 +7,9 @@ import ProjectCard from "@/components/projects/ProjectCard"
 interface ProjectsProps {}
 
 export const metadata = {
-  title: "Projects",
+  title: "Projects - Lam Sze Long",
 }
-
+metadata
 function Projects({}: ProjectsProps) {
   const projets = allProjects
     .filter((project) => project.published)

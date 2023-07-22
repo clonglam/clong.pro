@@ -22,11 +22,14 @@ const Navigation_mobile = ({ navigation }: Props) => {
   }
 
   return (
-    <div className="navigation-mobile items-center">
+    <div
+      className="navigation-mobile z-50 items-center"
+      style={{ isolation: "isolate" }}
+    >
       <MenuToggle toggle={() => toggleOpen()} isOpen={isOpen} />
 
       <motion.div
-        className="mobile-navigation-drawer"
+        className="mobile-navigation-drawer bg-white"
         variants={variants}
         animate={isOpen ? "open" : "closed"}
       >

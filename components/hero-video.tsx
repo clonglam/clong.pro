@@ -47,8 +47,12 @@ function HeroVideo() {
             style={{ width, height }}
             className="hero-video-mask min-w-[400px]"
           >
-            <video autoPlay muted loop className="hero-video">
+            {/* <video autoPlay muted loop className="hero-video">
               <source src="https://d33wubrfki0l68.cloudfront.net/cbbd243cbba5f491bf14d3b6f763c340c4226bbf/b620f/assets/home/duo_reel--desktop.mp4" />
+              your browser is not support video component
+            </video> */}
+            <video autoPlay muted loop className="hero-video">
+              <source src="/assets/heroVideo.mp4" />
               your browser is not support video component
             </video>
           </motion.div>
@@ -79,7 +83,7 @@ export function StickyContainer({
     >
       <div className="sticky-container h-[300vh] ">
         <div className="sticky-content left-0 top-0 flex h-[100vh] min-h-[800px] w-full items-center overflow-hidden bg-black">
-          <div className="content-container pt-[5px]">{children}</div>
+          <div className="content-container">{children}</div>
         </div>
       </div>
     </section>
