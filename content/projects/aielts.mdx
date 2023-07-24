@@ -1,42 +1,44 @@
 ---
-title: A.IELTES
+title: A.IELTS
 subHeading: Your Personal AI Tutor
-description: A Linkedin specially for actors students A Linkedin specially for actors students A Linkedin specially for actors students
+description: Enhancing IELTS Writing Skills Through AI-Powered Personalized Learning
 year: 2023
 technology:
   - ReactJs
+  - ChatGPT
+  - AWS RDS
+  - prisma
 tags:
   - Web Application
 
 ogImage: https://clong-profile.s3.us-west-2.amazonaws.com/aielts/AIELTSOgImage.png
 images:
   - https://clong-profile.s3.us-west-2.amazonaws.com/aielts/landing.png
+  - https://clong-profile.s3.us-west-2.amazonaws.com/aielts/garding.png
+  - https://clong-profile.s3.us-west-2.amazonaws.com/aielts/writings.png
+  - https://clong-profile.s3.us-west-2.amazonaws.com/aielts/submit.png
 date: "2023-01-02"
 published: true
+order: 4
 authors:
   - hugo
 ---
 
 ## What is this?
 
-The AGS Actor Gallery is an innovative platform designed specifically for actors to showcase their talents and professional profiles.
+AIELTS is an Project that leverage ChatGPT, it mainly provide the following service:
 
-Serving as an actor-centric version of **LinkedIn**, this gallery acts as a comprehensive repository for actors' details,
-With the ability to edit profiles and keep information up to date, actors can leverage this platform as a powerful tool for visibility
-and career growth in the entertainment industry.
+1. Mock IELTS Writing question library to user for training their writing skills.
+2. Provide estimate Grade, Comments and Grammer check by using the ChatGPT.
+3. Using stripe for token selling, and user can use the token for different AIELTS
 
 ## Difficulty & Solution
 
-1.  Designing a user-friendly interface to handle multiple data inputs and form display
+1. Ensuring accurate and effective grading of user writing, as this is a subjective process with many variables.
 
-    - Implementing a parallel routes modal, allowing users to modify their profiles on a single page and navigate back easily using a close button or route back feature.
+   - By using ChatGPT model it can provide great sample writing and also basic grammer check.
+   - We can use the chatgpt api to generate response for the writing, but it still need to play time to modify the format of response to ensure it can be display in the Web
 
-2.  Designing a user-friendly interface to handle multiple data inputs and form display
+2. Facilitating secure and smooth transactions for the token system might pose certain technical challenges.
 
-    Implementing a parallel routes modal, allowing users to modify their profiles on a single page and navigate back easily using a close button or route back feature.
-
-3.  Designing a user-friendly interface to handle multiple data inputs and form display
-
-    Implementing a parallel routes modal, allowing users to modify their profiles on a single page and navigate back easily using a close button or route back feature.
-
-Hopefully that looks good enough to you.
+- Integration with Stripe, a leading online payment processing platform, ensures secure and reliable transactions. Stripe's APIs allow for easy implementation and provide extensive support for developing the token system.

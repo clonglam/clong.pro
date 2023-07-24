@@ -14,11 +14,10 @@ function SiteFooter({}: Props) {
   return (
     <div className="container h-[400px] bg-[#1f1f1f] px-8 py-12 text-white">
       <div className="mb-2 w-full text-white">
+        <div className="mb-2 border-b-[2px]"></div>
         <p className="mb-[5px] text-xs font-semibold">CLong</p>
-        <p className="text-xs font-light">©2022 - CLong.pro </p>
+        <p className="text-xs font-light">©2023 - CLong.pro </p>
       </div>
-
-      <div className="mb-2 border-b-[2px]"></div>
 
       <div className="flex items-center justify-between">
         <div>
@@ -27,10 +26,10 @@ function SiteFooter({}: Props) {
             Created By <span className="font-semibold">Hugo Lam</span>
           </p>
           <div className="flex h-9 space-x-5">
-            <SocialMediaIcon
+            {/* <SocialMediaIcon
               media={siteConfig.socialMedia.github}
               SIcon={Icons.gitHub}
-            />
+            /> */}
             <SocialMediaIcon
               media={siteConfig.socialMedia.twitter}
               SIcon={Icons.twitter}

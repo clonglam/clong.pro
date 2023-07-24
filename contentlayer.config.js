@@ -72,6 +72,10 @@ export const Project = defineDocumentType(() => ({
       type: "list",
       of: { type: "string" },
     },
+    order: {
+      required: true,
+      type: "number",
+    },
     authors: {
       // Reference types are not embedded.
       // Until this is fixed, we can use a simple list.

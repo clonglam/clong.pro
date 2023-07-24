@@ -6,6 +6,8 @@ import { cubicBezier, motion, useScroll, useTransform } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
+import AnimatedLetters from "../animation/AnimatedLetters"
+
 type Props = {}
 
 function SubHeroTextSticky({}: Props) {
@@ -58,8 +60,7 @@ function SubHeroTextSticky({}: Props) {
       <div className="sticky top-[30vh] flex w-full flex-col justify-center px-8">
         <motion.h2
           className={cn(
-            "mb-6 w-[320px] text-5xl font-bold duration-500 delay-150 ease-ease-smooth md:mb-7 md:text-5xl lg:mb-8 lg:w-[680px] lg:text-6xl"
-            // isInView ? "none" : "translate-y-[200px]"
+            "ease-ease-smooth mb-6 w-[320px] text-5xl font-bold duration-500 delay-150 md:mb-7 md:text-5xl lg:mb-8 lg:w-[680px] lg:text-6xl"
           )}
           style={{ opacity: titleOpacity }}
         >
@@ -69,17 +70,16 @@ function SubHeroTextSticky({}: Props) {
         <div className="overflow-hidden">
           <motion.p
             className={cn(
-              "md:text-md mb-2 w-[480px] max-w-[80vw] text-justify text-sm font-bold tracking-tight duration-500 delay-500 ease-ease-smooth md:w-[640px] lg:mb-5 lg:w-[840px]  lg:text-lg"
-              // isInView ? "none" : "translate-y-[200px]"
+              "md:text-md ease-ease-smooth mb-2 w-[480px] max-w-[80vw] text-justify text-sm font-bold tracking-tight duration-500 delay-500 md:w-[640px] lg:mb-5 lg:w-[840px]  lg:text-lg"
             )}
             style={{ opacity: subTextOpacity }}
           >
-            Hugo Lam have more than 5 year Working Experience in Hong Kong, and
-            Current Located in Canada. in making Web application, Start from
-            pixel prefect, to Supercharged by the M2 chip — and with up to 18
-            hours of battery life1 — both laptops deliver blazing-fast
-            performance in an ultraportable design. More than 5 year Expreince
-            in making Web application, Start from pixel prefect, to{" "}
+            I am a full stack developer with PREN stack (Postgres, ReactJS,
+            ExpressJS, NodeJS) with advanced SASS skills. UI Version control
+            with GIT, Testing with jest. 5 year working experience in making Web
+            application, Start from pixel prefect, and forcus in doing different
+            animation effect to create diferent margic effect, with clean and
+            reusable code.
           </motion.p>
         </div>
 

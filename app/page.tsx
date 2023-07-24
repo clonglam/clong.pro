@@ -8,9 +8,9 @@ import MarqueeScrollingText from "@/components/marquee-scrolling-text"
 import ProjectSection from "@/components/projects/section-Projects"
 
 export const metadata = {
-  title: "Home - Lam Sze Long ",
+  title: "Home - Hugo Lam ",
   description:
-    "Profile of Lam Sze Long also name CLong a web developer and a medai artist.",
+    "Profile of Hugo Lam - CLong a web developer and a medai artist.",
 }
 
 export default function IndexPage() {

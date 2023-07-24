@@ -1,6 +1,7 @@
 {
   "name": "next-template",
   "version": "0.0.2",
+
   "private": true,
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
