@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Hugo Lam",
   description:
     "Profile of Hugo Lam aka CLong a web developer and a medai artist.",
   mainNav: [

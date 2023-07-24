@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 650">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0f0f0f;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3"/>
+  <g id="Layer_4" data-name="Layer 4"/>
+  <g id="Layer_1" data-name="Layer 1"/>
+  <g id="Layer_2" data-name="Layer 2"/>
+  <g id="Project_Animation" data-name="Project Animation"/>
+  <g id="web"/>
+  <g id="mobile"/>
+  <g id="ipad"/>
+  <g id="Layer_10" data-name="Layer 10"/>
+  <g id="Layer_9" data-name="Layer 9"/>
+  <g id="Layer_12" data-name="Layer 12">
+    <g>
+      <polygon class="cls-1" points="547.5 613 547.5 625 625 625 625 547.5 613 547.5 613 613 547.5 613"/>
+      <polygon class="cls-1" points="37 547.5 25 547.5 25 625 102.5 625 102.5 613 37 613 37 547.5"/>
+      <polygon class="cls-1" points="613 102.5 625 102.5 625 25 547.5 25 547.5 37 613 37 613 102.5"/>
+      <polygon class="cls-1" points="102.5 37 102.5 25 25 25 25 102.5 37 102.5 37 37 102.5 37"/>
+    </g>
+    <path class="cls-1" d="M461.53,204.66c-33.83,3.26-37.09,5.3-37.09,39.54v163.46c0,34.24,3.67,35.46,37.09,39.13v11.41h-109.24v-11.41c33.83-4.08,37.09-4.89,37.09-39.13v-81.53H249.97v81.53c0,33.83,3.26,35.06,36.69,39.13v11.41h-108.83v-11.41c33.02-3.67,36.69-4.89,36.69-39.13V244.2c0-34.24-3.67-36.28-36.69-39.54v-11.41h108.83v11.41c-32.61,2.85-36.69,5.71-36.69,39.54v64.81h139.41v-64.81c0-33.83-4.48-36.69-37.09-39.54v-11.41h109.24v11.41Z"/>
+  </g>
+</svg>
