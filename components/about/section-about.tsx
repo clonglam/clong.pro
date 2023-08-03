@@ -9,8 +9,8 @@ type Props = {}
 function AboutSection({}: Props) {
   return (
     <section className="py-8" id="about">
-      {/* <OpenCurtain />
-      <FiveYearExperience /> */}
+      <OpenCurtain />
+      <FiveYearExperience />
       <div className="container mx-auto px-10">
         <h3 className="mb-2 text-5xl font-bold md:mb-4">About Hugo</h3>
         {/* <p

@@ -1,12 +1,5 @@
-import React from "react"
-import Link from "next/link"
-
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-
+import SocialMediaIcons from "./SocialMediaIcons"
 import BackTop from "./back-to-top"
-import { Icon, Icons } from "./icons"
-import { buttonVariants } from "./ui/button"
 
 type Props = {}
 
@@ -25,11 +18,9 @@ function SiteFooter({}: Props) {
           <p className="text-sm">
             Created By <span className="font-semibold">Hugo Lam</span>
           </p>
-          <div className="flex h-9 space-x-5">
-            {/* <SocialMediaIcon
-              media={siteConfig.socialMedia.github}
-              SIcon={Icons.gitHub}
-            /> */}
+
+          <SocialMediaIcons />
+          {/* <div className="flex h-9 space-x-5">
             <SocialMediaIcon
               media={siteConfig.socialMedia.twitter}
               SIcon={Icons.twitter}
@@ -38,36 +29,12 @@ function SiteFooter({}: Props) {
               media={siteConfig.socialMedia.github}
               SIcon={Icons.gitHub}
             />
-          </div>
+          </div> */}
         </div>
 
         <BackTop />
       </div>
     </div>
-  )
-}
-
-interface SocialMediaIconType {
-  media: string
-  SIcon: Icon
-}
-
-function SocialMediaIcon({ media, SIcon }: SocialMediaIconType) {
-  return (
-    <Link href={media} target="_blank" rel="noreferrer">
-      <div
-        className={cn(
-          buttonVariants({
-            size: "sm",
-            variant: "ghost",
-          }),
-          "w-9 px-0"
-        )}
-      >
-        <SIcon className="h-5 w-5" />
-        <span className="sr-only">{media}</span>
-      </div>
-    </Link>
   )
 }
 

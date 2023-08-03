@@ -15,7 +15,7 @@ export const siteConfig = {
     },
     {
       title: "Projects",
-      href: "/projects",
+      href: "/#projects",
     },
     {
       title: "Blog",
@@ -26,6 +26,7 @@ export const siteConfig = {
   socialMedia: {
     twitter: "https://twitter.com/clonglam",
     github: "https://github.com/clonglam",
+    linkedin: "https://www.linkedin.com/in/sze-long-lam-188a10233/",
     // docs: "https://ui.shadcn.com",
   },
   marqueeText: ["Projects", "Works", "Designs"],

@@ -5,11 +5,12 @@ import Link from "next/link"
 import { allProjects } from "@/.contentlayer/generated"
 import { cubicBezier, motion, useScroll, useTransform } from "framer-motion"
 
+import ProjectSection from "./ProjectSection"
 import ScrollingProjectCard from "./ScrollingProjectCard"
 
 type Props = {}
 
-function ProjectSection({}: Props) {
+function ProjectTestSection({}: Props) {
   const projects = allProjects
     .sort((a, b) => a.order - b.order)
     .filter((project) => project.published)
@@ -22,11 +23,11 @@ function ProjectSection({}: Props) {
     offset: ["start end", "end end"],
   })
 
-  const x = useTransform(scrollYProgress, [0.3, 1], ["0vw", "-80vw"], {
+  const x = useTransform(scrollYProgress, [0.3, 1], ["0%", "-100%"], {
     ease: cubicBezier(0.17, 0.67, 0.83, 0.67),
   })
 
-  const opacity = useTransform(scrollYProgress, [0.95, 1], [1, 0], {
+  const opacity = useTransform(scrollYProgress, [0, 0.4, 0.5], [1, 1, 0], {
     ease: cubicBezier(0.17, 0.67, 0.83, 0.67),
   })
   const bgColor = useTransform(
@@ -45,12 +46,13 @@ function ProjectSection({}: Props) {
       ease: cubicBezier(0.17, 0.67, 0.83, 0.67),
     }
   )
+  // <div className="relative flex w-full items-center justify-center">
   return (
-    <section className="z-5 mt-3 overflow-x-clip">
-      <div className=" h-[300vh] w-full " ref={ref}>
+    <section className="relative flex h-[200vh] w-[100vw] items-start justify-center">
+      {/* <section className="relative z-20 mt-3 w-[100vw]"> */}
+      <div className="relative z-20" ref={ref}>
         <motion.div
-          className="sticky left-0 top-0 h-[100vh] pt-[10vh]"
-          style={{ opacity }}
+          className="sticky left-0 top-0 h-[100vh]  pt-[10vh]"
           // style={{ opacity, backgroundColor: bgColor, color: textColor }}
         >
           <div className="container mx-auto mb-5 px-8">
@@ -78,7 +80,7 @@ function ProjectSection({}: Props) {
           </div>
 
           <motion.div
-            className="flex gap-5  "
+            className="flex justify-start gap-5"
             style={{ x }}
             // ref={scrollingContainer}
           >
@@ -88,8 +90,16 @@ function ProjectSection({}: Props) {
           </motion.div>
         </motion.div>
       </div>
+      {/* </section> */}
+      {/* <HorizotalProjectScroll />
+       */}
+      {/* <div className="relative z-10 h-[300vh] bg-transparent">
+        <div className="sticky top-0 flex h-[100vh] w-full items-end justify-end text-[30vh] text-zinc-700">
+          HorizotalProjectScroll
+        </div>
+      </div> */}
     </section>
   )
 }
 
-export default ProjectSection
+export default ProjectTestSection

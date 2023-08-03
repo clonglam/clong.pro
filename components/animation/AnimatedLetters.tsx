@@ -3,6 +3,8 @@
 import React from "react"
 import { motion } from "framer-motion"
 
+import { cn } from "@/lib/utils"
+
 type Props = {
   title: string
   containerClassName?: string
@@ -29,9 +31,14 @@ const letterAnimation = {
   },
 }
 
-function AnimatedLetters({ title }: Props) {
+function AnimatedLetters({ title, containerClassName }: Props) {
   return (
-    <motion.span variants={container} initial="initial" animate="animate">
+    <motion.span
+      variants={container}
+      initial="initial"
+      animate="animate"
+      className={cn(containerClassName)}
+    >
       {[...title].map((letter, index) => (
         <motion.span variants={letterAnimation} key={title + index}>
           {letter}

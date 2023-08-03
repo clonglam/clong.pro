@@ -6,7 +6,7 @@ import Navigation_mobile from "./navigation-mobile"
 export function SiteHeader() {
   return (
     <header
-      className={`header-container fixed top-0 z-40  w-full bg-transparent `}
+      className={`header-container fixed top-0 z-[100]  w-full bg-transparent `}
       style={{ mixBlendMode: "difference", color: "white" }}
     >
       <div className="container flex items-center justify-between space-x-4 sm:space-x-0">

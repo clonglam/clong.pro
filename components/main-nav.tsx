@@ -13,7 +13,7 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div
-      className="flex w-full justify-between gap-6  md:gap-10"
+      className="flex w-full justify-between gap-6 md:gap-10"
       style={{ mixBlendMode: "difference", color: "white" }}
     >
       <Link href="/" className="flex items-center space-x-2">
