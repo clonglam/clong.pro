@@ -42,7 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="flex-1 ">{children}</div>
               <SiteFooter />
             </div>
-            <TailwindIndicator />
+            {/* <TailwindIndicator /> */}
           </CustomProvider>
         </body>
       </html>
