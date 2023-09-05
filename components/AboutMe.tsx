@@ -61,12 +61,13 @@ const AboutMe = (props: Props) => {
           </motion.div>
 
           <div className="container flex gap-x-5">
-            <div className="relative hidden h-[30vh] w-[25vw] lg:block">
+            <div className="relative hidden h-max w-[30vw] lg:block">
               <Image
-                src="/assets/projects/actorsGalleryOgImage.png"
+                src="/assets/HugoLamHalfshoot.png"
                 alt="ActorGallery"
-                fill
-                className="object-cover"
+                width={300}
+                height={400}
+                // className="object-cover"
               />
             </div>
 
