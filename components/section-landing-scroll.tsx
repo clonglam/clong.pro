@@ -62,7 +62,7 @@ function LandingScrollSection({}: Props) {
                 <Image
                   className="object-contain"
                   fill
-                  src="/assets/projects/actorsGalleryOgImage.png"
+                  src="https://clong-profile.s3.us-west-2.amazonaws.com/actorgallery/actorsGalleryOgImage.png"
                   alt="hero=-image"
                 />
               </div>

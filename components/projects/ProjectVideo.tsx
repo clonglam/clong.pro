@@ -20,6 +20,7 @@ function ProjectVideo({ placeholder, videohref }: Props) {
     <div
       className="mb-5 flex min-h-[120px] w-[100vw] items-center justify-center py-12"
       ref={ref}
+      id="details"
     >
       {videohref ? (
         <Dialog>

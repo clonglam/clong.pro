@@ -1,10 +1,20 @@
 ---
 title: Actors Gallery
+shortDescription: |
+  Actors Profile Application, for HKBU - Hong Kong Baptist University, Students can update thier profile with thier account
 subHeading: A Linkedin specially for actors students
-description: A Linkedin specially for actors students A Linkedin specially for actors students A Linkedin specially for actors students
+description: Actors Profile Application for the HKBU Students
+colorTheme: "#023466"
+primaryText: "#FDFDFD"
 year: 2023
+webDemoLink: https://ags-hkbuaf.com/
+
 technology:
-  - ReactJs
+  - NextJs
+  - React Hook form
+  - AWS S3
+  - React DnD
+
 tags:
   - Web Application
 ogImage: https://clong-profile.s3.us-west-2.amazonaws.com/actorgallery/actorsGalleryOgImage.png
@@ -30,6 +40,14 @@ and career growth in the entertainment industry.
 
 ## Difficulty & Solution
 
-1.  Designing a user-friendly interface to handle multiple data inputs and form display
+### Designing a user-friendly interface
 
-    - Implementing a parallel routes modal, allowing users to modify their profiles on a single page and navigate back easily using a close button or route back feature.
+- In this application, I used `@reactHookForm` to handle profile update form, `React Dnd` for handdle Drag n Drop ordering. `@tanstack/react-table` to handle different table.
+
+### Customer Authentication Flow
+
+- In this application, We prepare a custom authentication flow, included login and email authentation, forget password etc..
+
+### Skeletons and loading
+
+- There are many media in this application, Skeletons and loader is important.

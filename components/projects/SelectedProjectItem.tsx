@@ -40,16 +40,16 @@ const SelectedProjectItem = ({ project }: Props) => {
             ? project.description.slice(0, 150) + "..."
             : project.description}
         </p>
-      </Link>
 
-      <div className="absolute left-0 top-0 z-50 w-0 rounded-full transition-all duration-200 group-hover:block group-hover:w-1/2">
-        <Image
-          src={project.ogImage}
-          alt={project.title + "cover"}
-          width={720}
-          height={540}
-        />
-      </div>
+        <div className="absolute left-0 top-0 z-50 w-0 rounded-full transition-all duration-200 group-hover:block group-hover:w-1/2">
+          <Image
+            src={project.ogImage}
+            alt={project.title + "cover"}
+            width={720}
+            height={540}
+          />
+        </div>
+      </Link>
     </div>
   )
 }

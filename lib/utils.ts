@@ -18,3 +18,14 @@ export function formatDate(input: string | number): string {
 export function absoluteUrl(path: string) {
   return `${env.NEXT_PUBLIC_APP_URL}${path}`
 }
+
+export const scroll2El = (elID: string) => {
+  const selectedObject = document.getElementById(elID)
+
+  if (selectedObject) {
+    window.scrollTo({
+      top: selectedObject.offsetTop,
+      behavior: "smooth",
+    })
+  }
+}

@@ -83,6 +83,9 @@ async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="mx-auto mb-10 min-h-[100vh] w-full bg-[#171717] text-[#DFD3C3]">
       <ProjectHero
+        primaryText={project.primaryText}
+        shortDescription={project.shortDescription}
+        colorTheme={project.colorTheme}
         title={project.title}
         description={project.description}
         tags={project.tags}

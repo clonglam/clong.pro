@@ -51,8 +51,8 @@ function ProjectSection({}: Props) {
           className="sticky left-0 top-[65vh] z-0 flex h-[100vh] w-max space-x-8 transition-all ease-in"
           style={{ x }}
         >
-          <p className="pl-10 text-right text-[30vh] text-[#F3F3F3]">
-            Selected Project
+          <p className="no-wrap pl-10 text-right text-[30vh] text-[#F3F3F3]">
+            Projects in 2023
           </p>
 
           <div style={{}} className="ml-5 max-w-[50vw] px-5">

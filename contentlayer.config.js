@@ -25,6 +25,13 @@ export const Project = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
+    shortDescription: {
+      type: "string",
+      // required: true,
+    },
+    githubLink: {
+      type: "string",
+    },
     description: {
       type: "string",
       required: true,
@@ -54,9 +61,6 @@ export const Project = defineDocumentType(() => ({
     video: {
       type: "string",
     },
-    githubLink: {
-      type: "string",
-    },
     webDemoLink: {
       type: "string",
     },
@@ -75,6 +79,14 @@ export const Project = defineDocumentType(() => ({
     order: {
       required: true,
       type: "number",
+    },
+    colorTheme: {
+      type: "string",
+      required: true,
+    },
+    primaryText: {
+      type: "string",
+      required: true,
     },
     authors: {
       // Reference types are not embedded.

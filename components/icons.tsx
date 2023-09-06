@@ -73,6 +73,25 @@ export const Icons = {
       </g>
     </svg>
   ),
+  downArrow: ({ ...props }: LucideProps) => (
+    <svg
+      id="Layer_2"
+      data-name="Layer 2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 40.25 229"
+      {...props}
+    >
+      <g id="Layer_1-2" data-name="Layer 1">
+        <g>
+          <line className="down-arrow" x1="20.12" x2="20.12" y2="224.19" />
+          <path
+            className="arrow-head"
+            d="M.93,196.85c.93-.59,2.17-.32,2.76,.61l16.44,25.81,16.44-25.81c.59-.93,1.83-1.21,2.76-.61s1.2,1.84,.61,2.76l-18.12,28.46c-.37,.58-1,.93-1.69,.93s-1.32-.35-1.69-.93L.31,199.62c-.21-.33-.31-.71-.31-1.07,0-.66,.33-1.31,.93-1.69Z"
+          />
+        </g>
+      </g>
+    </svg>
+  ),
   reactIcon: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
