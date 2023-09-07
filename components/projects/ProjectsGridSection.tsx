@@ -11,12 +11,11 @@ function ProjectsGridSection() {
     .sort((a, b) => {
       return compareDesc(b.order, a.order)
     })
-    .slice(0, 4)
 
   return (
     <div
       id="projects"
-      className="container mx-auto min-h-[80vh] bg-[#1f1f1f] px-5 pt-[68px] text-[#F3F3F3]"
+      className="container mx-auto min-h-[100vh] bg-[#1f1f1f] p-5 pt-[68px] text-[#F3F3F3]"
     >
       <h1 className="mb-1 text-4xl font-semibold">Projects</h1>
       <p className="mb-8 text-sm leading-5 tracking-[0.02em]">
