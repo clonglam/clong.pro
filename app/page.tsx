@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe"
 import EndingApplications from "@/components/EndingApplications"
 import ProjectSection from "@/components/projects/ProjectSection"
+import ProjectsGridSection from "@/components/projects/ProjectsGridSection"
 import LandingScrollSection from "@/components/section-landing-scroll"
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function IndexPage() {
       <LandingScrollSection />
       <ProjectSection />
       <AboutMe />
+      <ProjectsGridSection />
       <EndingApplications />
     </div>
   )

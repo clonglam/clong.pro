@@ -43,7 +43,6 @@ function ProjectSection({}: Props) {
   return (
     <>
       <div
-        id="projects"
         className="relative mt-[-30vh] hidden h-max min-h-[280vh] w-full overflow-x-clip lg:block"
         ref={ref}
       >
