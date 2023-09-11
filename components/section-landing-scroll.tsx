@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { cubicBezier, motion, useScroll, useTransform } from "framer-motion"
 
 import LandingSectionMobile from "./LandingSectionMobile"
@@ -10,6 +11,7 @@ import SocialMediaIcons from "./SocialMediaIcons"
 type Props = {}
 
 function LandingScrollSection({}: Props) {
+  const router = useRouter()
   const ref = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -58,13 +60,19 @@ function LandingScrollSection({}: Props) {
                 Code. Design. knowledge.
               </h3>
 
-              <div className="relative aspect-video h-[100vh] w-[100vw]">
+              <div className="relative flex aspect-video h-[100vh] w-[90vw] items-center justify-center">
                 <Image
-                  className="object-contain"
-                  fill
-                  src="https://clong-profile.s3.us-west-2.amazonaws.com/actorgallery/actorsGalleryOgImage.png"
+                  onClick={() => router.push("/projects")}
+                  className=" cursor-pointer object-contain transition-transform duration-500 hover:scale-105"
+                  width={1800}
+                  height={1200}
+                  src="/assets/OverviewProject.png"
+                  // src="https://clong-profile.s3.us-west-2.amazonaws.com/actorgallery/actorsGalleryOgImage.png"
                   alt="hero=-image"
                 />
+                {/* <div className="absolute left-1/2 top-1/2 scale-0 rounded-full bg-red-500 transition-transform group-hover:scale-105 ">
+                  Projects
+                </div> */}
               </div>
 
               <div className="flex w-[100vw] flex-col px-8 pb-[5vh]">
