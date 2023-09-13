@@ -15,7 +15,7 @@ function ProjectSection({}: Props) {
   const selectedProjects = allProjects
     .sort((a, b) => a.order - b.order)
     .filter((project) => project.published)
-    .slice(0, 4)
+    .slice(0, 8)
 
   const { scrollYProgress } = useScroll({
     target: ref,

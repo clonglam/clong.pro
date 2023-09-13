@@ -16,7 +16,7 @@ function LandingSectionMobile({}: Props) {
   return (
     <div className="relative bg-[#D9D9D9] pt-12 text-[#1F1F1F]" ref={ref}>
       <div className="flex min-h-[100vh] flex-col items-start justify-center px-3">
-        <h2 className="text-6xl font-bold">Code. Design. knowledge.</h2>
+        <h2 className="text-4xl font-bold">Code. Design. knowledge.</h2>
         <FadeInText>
           <p className="lg:text-md mb-2 text-sm font-semibold text-[#1F1F1F]">
             Full Stack Developer | Media Artist
