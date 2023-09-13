@@ -67,12 +67,8 @@ function LandingScrollSection({}: Props) {
                   width={1800}
                   height={1200}
                   src="/assets/OverviewProject.png"
-                  // src="https://clong-profile.s3.us-west-2.amazonaws.com/actorgallery/actorsGalleryOgImage.png"
                   alt="hero=-image"
                 />
-                {/* <div className="absolute left-1/2 top-1/2 scale-0 rounded-full bg-red-500 transition-transform group-hover:scale-105 ">
-                  Projects
-                </div> */}
               </div>
 
               <div className="flex w-[100vw] flex-col px-8 pb-[5vh]">
@@ -86,7 +82,6 @@ function LandingScrollSection({}: Props) {
                 </p>
               </div>
             </motion.div>
-            {/* </div> */}
           </motion.div>
         </div>
       </div>

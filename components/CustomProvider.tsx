@@ -1,34 +1,32 @@
 "use client"
 
-import React from "react"
-import { usePathname } from "next/navigation"
-import { AnimatePresence, motion } from "framer-motion"
+import React, { createContext, useState } from "react"
 
 type Props = { children: React.ReactNode }
 
-function CustomProvider({ children }: Props) {
-  // const pageKey = usePathname()
+export type SettingContextType = {
+  isOpen: boolean
+  toggleMenu: () => void
+  updateMenu: (s: boolean) => void
+}
 
+export const SettingsContext = createContext<SettingContextType | undefined>(
+  undefined
+)
+
+function CustomProvider({ children }: Props) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+  const updateMenu = (s: boolean) => {
+    setIsOpen(s)
+  }
   return (
-    // <AnimatePresence
-    //   // mode="wait"
-    //   initial={false}
-    //   onExitComplete={() => window.scrollTo(0, 0)}
-    // >
-    //   <div
-    //     key={pageKey}
-    //     // initial={{ x: 300, opacity: 0, backgroundColor: "#000 " }}
-    //     // animate={{ x: 0, opacity: 1, backgroundColor: "#000" }}
-    //     // exit={{ x: 300, opacity: 0, backgroundColor: "transparent" }}
-    //     // transition={{
-    //     //   type: "spring",
-    //     //   stiffness: 260,
-    //     //   damping: 20,
-    //     //   duration: 60,
-    //     // }}
-    //   >
-    <div>{children}</div>
-    // </AnimatePresence>
+    <SettingsContext.Provider value={{ isOpen, toggleMenu, updateMenu }}>
+      <div>{children}</div>
+    </SettingsContext.Provider>
   )
 }
 

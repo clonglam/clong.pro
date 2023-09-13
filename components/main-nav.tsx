@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import Link from "next/link"
 
@@ -6,14 +8,21 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 
+import { SettingContextType, SettingsContext } from "./CustomProvider"
+import Navigation_mobile from "./navigation-mobile"
+
 interface MainNavProps {
   items?: NavItem[]
 }
 
 export function MainNav({ items }: MainNavProps) {
+  const { isOpen, toggleMenu } = React.useContext(
+    SettingsContext
+  ) as SettingContextType
+
   return (
     <div
-      className="flex w-full justify-between gap-6 md:gap-10"
+      className="relative flex w-full justify-between gap-6 md:gap-10"
       style={{ mixBlendMode: "difference", color: "white" }}
     >
       <Link href="/" className="flex items-center space-x-2">
@@ -40,6 +49,7 @@ export function MainNav({ items }: MainNavProps) {
           )}
         </nav>
       ) : null}
+      <Navigation_mobile navigation={siteConfig.mainNav} />
     </div>
   )
 }

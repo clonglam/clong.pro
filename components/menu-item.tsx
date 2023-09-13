@@ -11,12 +11,15 @@ interface Props {
 const MenuItem = ({ title, href }: Props) => {
   return (
     <motion.li
-      className=""
+      className="px-3 py-2 text-lg"
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Link className="text-white mix-blend-difference " href={href}>
+      <Link
+        className="text-white mix-blend-difference hover:underline "
+        href={href}
+      >
         {title}
       </Link>
     </motion.li>

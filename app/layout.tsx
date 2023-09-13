@@ -37,6 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body className={cn("font-sans antialiased", fontSans.variable)}>
           <CustomProvider>
+            {/* <MobileMenu /> */}
             <div className="relative min-h-screen bg-[#1f1f1f]">
               <SiteHeader />
               <div className="flex-1 ">{children}</div>
