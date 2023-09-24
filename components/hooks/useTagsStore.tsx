@@ -3,7 +3,7 @@ import { create } from "zustand"
 export const tags = [
   { label: "Web Application", tag: "Web Application" },
   { label: "Mobile Application", tag: "Mobile Application" },
-  { label: "ReactJs", tag: "ReactJs" },
+  // { label: "ReactJs", tag: "ReactJs" },
   { label: "ExpressJs", tag: "ExpressJs" },
 ]
 

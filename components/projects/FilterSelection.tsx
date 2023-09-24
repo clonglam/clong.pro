@@ -12,7 +12,7 @@ function FilterSelection() {
   const selectedTag = useTagsStore((s) => s.tag)
 
   return (
-    <div className="mb-2 flex space-x-5">
+    <div className="mb-2 flex flex-wrap gap-x-5 gap-y-3">
       <span
         className={cn(
           buttonVariants({

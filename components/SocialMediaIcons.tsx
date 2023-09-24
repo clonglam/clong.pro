@@ -35,7 +35,7 @@ interface SocialMediaIconType {
 
 export function SocialMediaIcon({ media, SIcon }: SocialMediaIconType) {
   return (
-    <Link href={media} target="_blank" rel="noreferrer">
+    <a href={media} target="_blank" rel="noreferrer">
       <div
         className={cn(
           buttonVariants({
@@ -48,7 +48,7 @@ export function SocialMediaIcon({ media, SIcon }: SocialMediaIconType) {
         <SIcon className="h-5 w-5" />
         <span className="sr-only">{media}</span>
       </div>
-    </Link>
+    </a>
   )
 }
 
