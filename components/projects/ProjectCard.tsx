@@ -23,10 +23,10 @@ function ProjectCard({ project, index }: Props) {
         />
 
         <div className="absolute left-0 top-0 flex h-full w-1/2 -translate-x-full items-center justify-center overflow-hidden rounded-l bg-zinc-50/90 p-2 text-zinc-800 opacity-0 transition-transform duration-500 group-hover:translate-x-0 group-hover:opacity-100">
-          <div className=" flex flex-col items-center justify-center gap-y-5 text-center">
+          <div className=" md:text-md flex flex-col items-center justify-center gap-y-2 py-5 text-center text-sm md:gap-y-5">
             <h3 className="font-bold">{project.title}</h3>
             <Icons.x />
-            <h3>{project.tags[0] || "Web Application"}</h3>
+            <h3 className="text-xs">{project.tags[0] || "Web Application"}</h3>
           </div>
         </div>
       </div>

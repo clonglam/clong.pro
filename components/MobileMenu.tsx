@@ -13,10 +13,10 @@ import MenuItem from "./menu-item"
 
 function MobileMenu() {
   const { isOpen } = useContext(SettingsContext) as SettingContextType
-  return <>{isOpen && <MobileMenu2 />}</>
+  return <>{isOpen && <MobileMenuContent />}</>
 }
 
-function MobileMenu2() {
+function MobileMenuContent() {
   useLockBody()
   const { isOpen, toggleMenu } = useContext(
     SettingsContext
